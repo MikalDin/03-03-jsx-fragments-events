@@ -3,8 +3,15 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const showAlert = () => {
-    alert('You clicked the button!');
+  const [inputValue, setInputValue] = useState(' ');
+
+  const handleInputChange = (event) => {
+      setInputValue(event.target.value);
+  };
+  
+  const handleSubmit = (event) => {
+      event.preventDefault();
+      console.log('Input value:', inputValue);
   };
   return (
     <div className="App">
@@ -13,7 +20,15 @@ function App() {
        <>
        <h1> WelcoMe 2 REACT</h1>
        <p> Hope you're excited ands ready 2 delve</p>
-       <button onClick={showAlert}>Click me</button>
+       <form onSubmit={handleSubmit}>
+        <input 
+        type="text"
+        value={inputValue}
+        onChange={handleInputChange}
+        placeholder="Enter text..."
+        />
+        <button type="submit">Submit</button>
+       </form>
        
        </>
         <a
