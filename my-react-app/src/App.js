@@ -19,7 +19,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
        <>
        <h1> WelcoMe 2 REACT</h1>
-       <p> Hope you're excited ands ready 2 delve</p>
+       <p> Hope you're excited ands ready 2 dive in</p>
        <form onSubmit={handleSubmit}>
         <input 
         type="text"
